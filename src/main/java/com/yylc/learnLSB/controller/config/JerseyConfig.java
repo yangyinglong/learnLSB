@@ -15,7 +15,7 @@ public class JerseyConfig {
 
 	@Bean
 	public ServletRegistrationBean jerseyServlet() {
-		ServletRegistrationBean registration = new ServletRegistrationBean(new ServletContainer(), "/learnLSB/*");
+		ServletRegistrationBean registration = new ServletRegistrationBean(new ServletContainer(), "/learnlsb/*");
 		// our rest resources will be available in the path /rest/*
 		registration.addInitParameter(ServletProperties.JAXRS_APPLICATION_CLASS, JerseyResourceConfig.class.getName());
 		return registration;
