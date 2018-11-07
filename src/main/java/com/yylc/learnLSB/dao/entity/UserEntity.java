@@ -8,88 +8,67 @@ import java.sql.Timestamp;
 @Entity
 public class UserEntity implements Serializable {
 
-    @Id
-    private String id;
-    @Column
-    private String userName;
-    @Column
-    private String phone;
-    @Column
-    private String password;
-    @Column
-    private Integer status;
-    @Column
-    private String createdTime;
-    @Column
-    private String changedTime;
+@Id
+@GeneratedValue
+private Integer id;
+@Column
+private String name;
+@Column
+private String phone;
+@Column
+private String password;
+@Column
+private String email;
+@Column
+private Integer statue;
+@Column
+private String createdTime;
+@Column
+private String changedTime;
 
-    public UserEntity() {
-    }
+public UserEntity(){}
 
-    public UserEntity(String id, String userName, String phone, String password, Integer status, String createdTime, String changedTime) {
-        this.id = id;
-        this.userName = userName;
-        this.phone = phone;
-        this.password = password;
-        this.status = status;
-        this.createdTime = createdTime;
-        this.changedTime = changedTime;
-    }
+public UserEntity(Integer id,String name,String phone,String password,String email,Integer statue,String createdTime,String changedTime){
+this.id = id;
+this.name = name;
+this.phone = phone;
+this.password = password;
+this.email = email;
+this.statue = statue;
+this.createdTime = createdTime;
+this.changedTime = changedTime;
+}
 
-    public String getId() {
-        return id;
-    }
+public Integer getId() {return id;}
 
-    public void setId(String id) {
-        this.id = id;
-    }
+public void setId(Integer id){this.id = id;}
 
-    public String getUserName() {
-        return userName;
-    }
+public String getName() {return name;}
 
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
+public void setName(String name){this.name = name;}
 
-    public String getPhone() {
-        return phone;
-    }
+public String getPhone() {return phone;}
 
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
+public void setPhone(String phone){this.phone = phone;}
 
-    public String getPassword() {
-        return password;
-    }
+public String getPassword() {return password;}
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
+public void setPassword(String password){this.password = password;}
 
-    public Integer getStatus() {
-        return status;
-    }
+public String getEmail() {return email;}
 
-    public void setStatus(Integer status) {
-        this.status = status;
-    }
+public void setEmail(String email){this.email = email;}
 
-    public String getCreatedTime() {
-        return createdTime;
-    }
+public Integer getStatue() {return statue;}
 
-    public void setCreatedTime(String createdTime) {
-        this.createdTime = createdTime;
-    }
+public void setStatue(Integer statue){this.statue = statue;}
 
-    public String getChangedTime() {
-        return changedTime;
-    }
+public String getCreatedTime() {return createdTime;}
 
-    public void setChangedTime(String changedTime) {
-        this.changedTime = changedTime;
-    }
+public void setCreatedTime(String createdTime){this.createdTime = createdTime;}
+
+public String getChangedTime() {return changedTime;}
+
+public void setChangedTime(String changedTime){this.changedTime = changedTime;}
 
 }

@@ -6,6 +6,8 @@ import com.yylc.learnLSB.dto.request.LoginRestDto;
 import com.yylc.learnLSB.model.IShowService;
 import com.yylc.learnLSB.util.FormatUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -14,7 +16,9 @@ import javax.ws.rs.core.MediaType;
 import java.util.HashMap;
 import java.util.Map;
 
+@Component  // 新增
 @Path("/user")
+@CrossOrigin    // 新增
 public class Controller {
     // model 层的接口
     @Autowired
